@@ -491,15 +491,21 @@ img {
 
 /* Подвал */
 .footer {
-  background-color: var(--secondary-bg-color);
+  /* background-color: var(--secondary-bg-color); */
 }
 .flexbox {
+  max-width: 1600px;
+  background-color: var(--secondary-bg-color);
   display: flex;
+  padding-bottom: 60px;
 }
 .content-box {
-  flex-basis: calc((70% - 30px) / 2);
+  flex-basis: calc((50% - 30px) / 2);
 }
-
+.content-box:not(:last-child) {
+  padding-right: 70px;
+  padding-left: 215px;
+}
 .footer-text {
   display: block;
   margin-top: 0;

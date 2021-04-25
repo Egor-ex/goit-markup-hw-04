@@ -50,7 +50,7 @@ h3 {
 }
 
 /* Шапка */
-.border .main-nav {
+.border {
   padding: 0;
   border-bottom: 1px solid var(--border-header-color);
 }
@@ -140,11 +140,10 @@ h3 {
   letter-spacing: 0.02em;
 }
 
-.icon-mail {
+.icon-mail-svg {
   content: '';
   margin-right: 10px;
-  width: 16px;
-  height: 12px;
+
   background-position: center;
   background-size: contain;
   color: currentColor;
@@ -153,11 +152,9 @@ h3 {
 .auth-cont:focus {
   fill: var(--acent-color);
 }
-.icon-tel {
+.icon-tel-svg {
   content: '';
   margin-right: 10px;
-  width: 10px;
-  height: 16px;
   background-position: center;
   background-size: contain;
   color: currentColor;
@@ -207,54 +204,21 @@ h3 {
 .features .list {
   display: flex;
 }
-.icon-features:nth-child(1)::before {
-  display: block;
-  content: '';
+.features-svg {
+  width: 270px;
   height: 120px;
-  background: var(--button-bg-color);
-  border-radius: 4px;
-  background-image: url(../images/svg/features/antenna.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 70px;
   margin-bottom: 30px;
+  background-color: var(--button-bg-color);
 }
-.icon-features:nth-child(2)::before {
-  display: block;
-  content: '';
-  height: 120px;
-  background: var(--button-bg-color);
-  border-radius: 4px;
-  background-image: url(../images/svg/features/clock.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 70px;
-  margin-bottom: 30px;
+.icon-features-svg {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
-.icon-features:nth-child(3)::before {
-  display: block;
-  content: '';
-  height: 120px;
-  background: var(--button-bg-color);
-  border-radius: 4px;
-  background-image: url(../images/svg/features/diagram.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 70px;
-  margin-bottom: 30px;
-}
-.icon-features:nth-child(4)::before {
-  display: block;
-  content: '';
-  height: 120px;
-  background: var(--button-bg-color);
-  border-radius: 4px;
-  background-image: url(../images/svg/features/astronaut.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 70px;
-  margin-bottom: 30px;
-}
+
 .features .item:not(:last-child) {
   margin-right: 30px;
 }
@@ -310,7 +274,9 @@ h3 {
 .work,
 .team {
   text-align: center;
+  padding-top: 0;
 }
+
 .work .list,
 .team .list {
   display: flex;
@@ -339,6 +305,7 @@ h3 {
 .team-title {
   margin-top: 0;
   margin-bottom: 50px;
+  padding-top: 94px;
 
   color: var(--primary-text-color);
 
@@ -360,6 +327,7 @@ h3 {
 }
 .team-card {
   padding: 30px 32px;
+  background-color: var(--title-list-color);
 }
 .team-text {
   margin: 0;
@@ -465,11 +433,11 @@ img {
   display: inline-flex;
   justify-content: center;
 }
-
+/* 
 .icon-clients-svg {
   width: 106px;
   height: 60px;
-}
+} */
 .social-icon-clients:not(:last-child) {
   margin-right: 10px;
 }
@@ -494,16 +462,13 @@ img {
   background-color: var(--secondary-bg-color);
 }
 .flexbox {
-  /* background-color: var(--secondary-bg-color); */
   display: flex;
-  padding-bottom: 60px;
 }
 .content-box {
   flex-basis: calc((50% - 30px) / 2);
 }
 .content-box:not(:last-child) {
-  padding-right: 70px;
-  padding-left: 215px;
+  margin-right: 70px;
 }
 .footer-text {
   display: block;
@@ -523,7 +488,7 @@ img {
   display: block;
   margin-top: 0;
   margin-bottom: 20px;
-  padding-top: 60px;
+
   color: var(--title-list-color);
   text-decoration: none;
 }
@@ -549,7 +514,7 @@ img {
 .join-title {
   margin: 0;
   padding: 0;
-  padding-top: 72px;
+
   margin-bottom: 20px;
   color: var(--title-list-color);
   font-weight: 700;
@@ -563,10 +528,6 @@ img {
   justify-content: center;
 }
 
-.icon-join-svg {
-  width: 20px;
-  height: 20px;
-}
 .social-icon-join:not(:last-child) {
   margin-right: 10px;
 }
@@ -622,12 +583,7 @@ img {
   letter-spacing: 0.06em;
 }
 .button:focus,
-.button:hover {
-  color: var(--title-list-color);
-  background-color: var(--acent-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-}
+.button:hover,
 .button.current {
   color: var(--title-list-color);
   background-color: var(--acent-color);

@@ -205,14 +205,14 @@ h3 {
   display: flex;
 }
 .features-svg {
-  width: 270px;
   height: 120px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   margin-bottom: 30px;
   background-color: var(--button-bg-color);
 }
 .icon-features-svg {
-  margin-top: 25px;
-  margin-bottom: 25px;
+  width: 270px;
   display: inline-block;
   justify-content: center;
   align-items: center;

@@ -429,11 +429,7 @@ img {
   display: inline-flex;
   justify-content: center;
 }
-/* 
-.icon-clients-svg {
-  width: 106px;
-  height: 60px;
-} */
+
 .social-icon-clients:not(:last-child) {
   margin-right: 10px;
 }
@@ -442,6 +438,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+
   width: 170px;
   height: 92px;
   border-radius: 4px;
@@ -456,6 +453,9 @@ img {
 /* Подвал */
 .footer {
   background-color: var(--secondary-bg-color);
+}
+.address {
+  font-style: inherit;
 }
 .flexbox {
   display: flex;
